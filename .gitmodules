@@ -1,0 +1,3 @@
+[submodule "GamaAPI"]
+	path = GamaAPI
+	url = https://github.com/ealcca/gamaApp.git
