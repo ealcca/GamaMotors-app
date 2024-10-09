@@ -1,3 +1,6 @@
 [submodule "GamaAPI"]
 	path = GamaAPI
 	url = https://github.com/ealcca/gamaApp.git
+[submodule "GamaUI"]
+	path = GamaUI
+	url = https://github.com/ealcca/dealership-app.git
