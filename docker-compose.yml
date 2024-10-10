@@ -1,0 +1,29 @@
+services:
+  backend:
+    build:
+      context: ./GamaAPI
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+
+  frontend:
+    build:
+      context: ./GamaUI
+      dockerfile: Dockerfile
+    ports:
+      - "8080:80"
+
+  database:
+    image: postgres:13
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: secret123!
+      POSTGRES_DB: my_db
+    volumes:
+      - './postgres_data:/var/lib/postgresql/data'
+    ports:
+      - "5432:5432"
+
+networks:
+  my-network:
+    driver: bridge
